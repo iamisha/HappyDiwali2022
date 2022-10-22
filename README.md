@@ -2,6 +2,6 @@
 
 Happy Dipawali 2022 to all...
 
-# view of the only desktop verson
+# view of the desktop verson
 
 ![CHEESE!](project.png)
