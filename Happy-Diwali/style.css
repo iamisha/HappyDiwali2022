@@ -128,13 +128,99 @@ footer
     bottom: 0;
     height: 6vh;
 }
+@media screen and (min-width: 1301px) and (max-width: 1608px){
+    .container{
+        left: 32%;
+    }
+}
+@media screen and (min-width: 1001px) and (max-width: 1300px){
+    .container{
+        left: 26%;
+    }
+}
+@media screen and (min-width: 802px) and (max-width: 1000px){
+    .container{
+        left: 22%;
+    }
+}
+@media screen and (min-width: 801px)and (max-width: 901px){
+    .container{
+        left: 18%;
+    }
+}
+@media screen and (min-width: 754px) and (max-width: 800px){
+    .container{
+        left: 18%;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 753px){
+    .container{
+        left: 14%;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 700px){
+    .container{
+        left: 9%;
+    }
+
+}
 @media screen and (max-width: 600px){
     body{
         display: flex
-    };
+    }
     .container{
         transform: none;
         top: 40%;
         left: 0;
+    }
+}
+@media screen and (max-width: 600px){
+    .container{
+        left: 18%;
+        top: 30%;
+        width: 400px;
+        height: 400px;
+    }
+    h4{
+        margin: 90px 100px;
+        padding: 0;
+        line-height: 50px;
+        font-style: bold;
+    }
+    h4 span{
+        
+        position: relative;
+        margin: 38px;
+    }
+}
+@media screen and (max-width: 510px){
+    .container{
+        left: 23%;
+        top: 30%;
+        width: 300px;
+        height: 300px;
+    }
+    h4{
+        margin: 40px 100px;
+        font-size: medium;
+        line-height: 30px;
+    }
+    h4 span{
+        margin: 22px;
+    }
+    .firework{
+        height: 80px;
+        width: 140px;
+    }
+    .firework::before{
+        left: 50px;
+    }
+    footer{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 410px){
+    .container{
+        left: 14%;
     }
 }
