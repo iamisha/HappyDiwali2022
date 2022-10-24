@@ -1,30 +1,43 @@
-body{
-
-    background-color: #301934;
+*{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    
+}
+body{
     font-family: "Sofia", sans-serif;
-    font-size: 32px;
-    color: #DAA520;
+}
+.container{
+    background: #301934;
+    border: 2px solid black;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+    scroll-margin-block: auto;
+    display: grid;
+    grid-template-rows: 92% auto;
+    row-gap: 12px;
+    place-items: center;
 }
 
-.container{
-    position: absolute;
-    top: 20%;
-    left: 38%;
-   /* translate: translate(-50%, -50%);*/
-    width: 500px;
-    height: 500px;
+.sec-con{
     background-color:#722F37;
-    border-radius: 50%;
-   box-shadow: 0 20px 100px rgba(0, 0, 0, .5);
+    height: 500px;
+    width: 500px;
+    border-radius: 500px;
+    box-shadow:  0 20px 100px rgba(0, 0, 0, .5);
+    translate: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
-.container::before{
+
+.sec-con::before{
     content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 500px;
+    height: 500px;
     border: 8px dotted #fff;
     box-sizing: border-box;
     border-radius: 50%;
@@ -39,39 +52,33 @@ body{
         transform: scale(1.1) rotate(-360deg);
     }
 }
-h4{
-    margin: 180px 140px;
+.txts h4{
     padding: 0;
-    line-height: 50px;
     font-style: bold;
-}
-h4 span{
-    position: relative;
-    margin: 48px;
 }
 
 .firework{
-   /* background-color: #684a38;*/
-    border: 1px solid brown;
-    background-color:  #64241d;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 240px;
-    height: 120px;
-    border-bottom-left-radius: 140px;
-    border-bottom-right-radius: 140px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, .5);
-}
-.firework::before{
+    /* background-color: #684a38;*/
+     border: 1px solid brown;
+     background-color:  #64241d;
+     position: absolute;
+     bottom: 28%;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 180px;
+     height: 90px;
+     border-bottom-left-radius: 140px;
+     border-bottom-right-radius: 140px;
+     box-shadow: 0 0 25px rgba(0, 0, 0, .5);
+ }
+ .firework::before{
     content: "";
     position: absolute;
     background: #ff4500;
     width: 40px;
     height: 80px;
     top: -80px;
-    left: 100px;
+    left: 70px;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
     transform-origin: bottom-right;
@@ -98,6 +105,12 @@ h4 span{
         box-shadow: 0 0 30px #ff4500;
     }
 }
+span.dynamic-txts{
+    position: relative;
+    bottom: -20px;
+    margin-left: -20px;
+    font-size: 44px;
+}
 span.dynamic-txts::after{
     
     content: "";
@@ -107,119 +120,107 @@ span.dynamic-txts::after{
     left: 0;
     background: #722F37;
     border-left: 2px solid orange;
-    animation: typing 2s steps(24) infinite;
+    animation: typing 3s steps(14) infinite;
 }
 @keyframes typing {
     100%{
         left: 100%;
     }
 }
-footer
+.footer
 {
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
     background-color: #231427;
     width: 100%;
-    font-size: 16px;
+    font-size: x-small;
     position: absolute;
     bottom: 0;
     height: 6vh;
 }
-@media screen and (min-width: 1301px) and (max-width: 1608px){
-    .container{
-        left: 32%;
-    }
+.sec-con h4{
+    font-size: 2rem;
+    color: rgba(255, 255, 255, .5);
+    text-shadow: 0px 0px 6px orangered, 0px 2px 1px orange;
 }
-@media screen and (min-width: 1001px) and (max-width: 1300px){
+@media screen and (max-width: 664px){
     .container{
-        left: 26%;
-    }
-}
-@media screen and (min-width: 802px) and (max-width: 1000px){
-    .container{
-        left: 22%;
-    }
-}
-@media screen and (min-width: 801px)and (max-width: 901px){
-    .container{
-        left: 18%;
-    }
-}
-@media screen and (min-width: 754px) and (max-width: 800px){
-    .container{
-        left: 18%;
-    }
-}
-@media screen and (min-width: 701px) and (max-width: 753px){
-    .container{
-        left: 14%;
-    }
-}
-@media screen and (min-width: 601px) and (max-width: 700px){
-    .container{
-        left: 9%;
-    }
+        border: 2px solid black;
+        min-height: 100vh;
+        max-width: 100vw;
+        overflow: hidden;
+        scroll-margin: 0;
 
-}
-@media screen and (max-width: 600px){
-    body{
-        display: flex
     }
-    .container{
-        transform: none;
-        top: 40%;
-        left: 0;
+    .sec-con{
+        height: 400px;
+        width: 400px;
     }
-}
-@media screen and (max-width: 600px){
-    .container{
-        left: 18%;
-        top: 30%;
+    .sec-con::before{
+        
         width: 400px;
         height: 400px;
-    }
-    h4{
-        margin: 90px 100px;
-        padding: 0;
-        line-height: 50px;
-        font-style: bold;
-    }
-    h4 span{
         
-        position: relative;
-        margin: 38px;
     }
-}
-@media screen and (max-width: 510px){
-    .container{
-        left: 23%;
-        top: 30%;
-        width: 300px;
-        height: 300px;
-    }
-    h4{
-        margin: 40px 100px;
-        font-size: medium;
-        line-height: 30px;
-    }
-    h4 span{
-        margin: 22px;
+    
+    span.dynamic-txts{
+        
+        font-size: 30px;
+        margin-left: -14px;
     }
     .firework{
-        height: 80px;
-        width: 140px;
-    }
-    .firework::before{
-        left: 50px;
-    }
-    footer{
-        font-size: 12px;
+           bottom: 32%;
+           width: 120px;
+           height: 60px;
+     }
+     .firework::before{
+
+        width: 40px;
+        height: 70px;
+        left: 40px;
+        
     }
 }
-@media screen and (max-width: 410px){
-    .container{
-        left: 14%;
+@media screen and (max-width: 530px){
+    .sec-con{
+        height: 300px;
+        width: 300px;
     }
+    .sec-con::before{
+        
+        width: 300px;
+        height: 300px;
+        
+    }
+    span.dynamic-txts{
+        
+        font-size: 20px;
+        margin-left: -48px;
+        margin-top: 12px;
+    }
+    .firework{
+        bottom: 32%;
+        width: 120px;
+        height: 60px;
+  }
+  .firework::before{
+
+     width: 40px;
+     height: 70px;
+     left: 40px;
+     
+ }
+ span.dynamic-txts::after{
+    top: 6px;
+ }
+ .firework{
+    bottom: 37%;
+ }
+ .firework::before{
+    height: 60px;
+    top: -58px;
+ }
 }
